@@ -96,7 +96,7 @@
 - Jonny M
 - Brian M
 - Jayde M
-- Miles M
+- [Moran, Miles (@miles-moran)](https://github.com/miles-moran/liftoff-assignments.git)
 - Aida M
 - Richard M
 - Robert N
