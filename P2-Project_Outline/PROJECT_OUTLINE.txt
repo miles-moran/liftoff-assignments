@@ -1,3 +1,55 @@
-https://docs.google.com/document/d/1rEx6WNCGuSbKOknkytlujcxT5Y_bk83imNDU9vHKfd8/edit?usp=sharing
+Overview - Miles Moran
 
-Link to a google doc
+My program is designed to solve a particular type of packing puzzle. Packing puzzles are encountered every time you organize a pantry, clean out a closet, load a truck, or, in short, arrange objects within a container. In these real life examples, the guidelines for a “solved puzzle” aren’t at all strict, and an end goal might require visual pleasantness rather than efficiency. While the packing puzzles that comes with yearly Spring cleaning allow for “cheating”, in the form of of donations to goodwill or trips to a storage locker, my program is designed to solve puzzles that are strict in their definition of a solution. 
+
+This past Christmas, I was gifted with a puzzle game called “Cat Stax”. It was a feline-themed puzzle game that featured a paper container and various “cats” that were to be placed inside. After it became wildly popular at our family’s Christmas party, I grew to loathe my sister and loved ones who had more natural ability than I at problem solving. I set out to create a machine that could best man in the art of cat stacking.
+
+Features
+
+Shape rotation. Allow user to see how their shapes could be rotated on an x-y-z coordinate plane.
+Packing puzzle brute force solver.
+Commonly used shapes that can be added to a database by users.
+Statistics on the solving itself.
+
+Technologies
+
+Java
+Python
+Jinja2
+Thymeleaf
+MAMP
+JavaScript
+Flask
+SQLalchemy
+
+What do I need to learn?
+
+Languages
+JavaScript is the only “foreign” language I plan to learn through this capstone project. I’m hoping to make the user input process fluid, and a bit more responsive than the web apps I have made in the past, and I believe JavaScript can accomplish this. In general, I will use classes to their potential rather than using them as in exercise in good habit, but mathematics will be delved into more than anything.
+
+Converting user input into a shape object
+With previous launchcode projects, we were primarily concerned with text: writing something, saving something, and sending it elsewhere. For this project, however, I must convert a form into a shape. This will be done using a point class that uses a coordinate system. 
+
+Rotating shapes
+Our program must allow for shapes to be rotated. It would would be tedious to have users punch every way a shape could be oriented on an x and y axis. Instead, we must 
+use inverse and negative functions on a set of points to get other sets of points for these alterations.
+
+Solving the problem
+There are two ways we could go about this problem: a brute force approach or an elegant approach. I’m not sure how I would go about the latter, so with our brute force approach I must 
+Compare every position and every orientation of every shape until a solution is found. This requires thousands of comparisons so I must learn how to write clean code.
+
+Writing nice code / refactoring skills
+With past projects I didn’t really need to concern myself with the most efficient line of code. We weren’t working with tons of loops, things were quick, and they didn’t need to be clean. By brute forcing our way to a solution our program must execute a thousand lines of code, or rather execute the same ten lines of code, a hundred times.
+
+I have begun working on the project and while it works for simpler puzzles, ones with a small canvas (a container in which shapes are to be placed), fewer shapes, or simpler (symmetrical shapes), but as the number of permutations grow, my program stops returning anything at all. 
+
+The solving function I wrote is consistent for “complex” puzzles and “simple” ones, it cannot discriminate, and so I find it strange that a bug would manifest itself only with the latter.
+If we were to have a 3x1 rectangle where three 1x1 blocks could be placed along three “locations”, there would be 27 ways to arrange them; six of which where a block would not share its space. If my program were to attempt this “puzzle”, it would go through those 27 combinations and return the first solution, of six, it stumbled upon. I believe the number of combinations for a given problem, which I will call “C”, is Area of CanvasAmount of Shapes * Shape Rotation Count1* Shape Rotation Count2 * Shape Rotation Count3 ... In my previous example, a 1x1 square is essentially the same if it flipped on its head. Three to the third times one times times one is 27. This number increases rapidly as more shapes are added to the fray, or if the canvas grows larger, or if if the shapes grow more complicated (asymmetrical), and so I believe if my program fails consistently at a certain level of C, I must do something to make the code run more efficiently. 
+
+Doing all this for 3d objects
+If I am successful with my other goals, I must follow these same steps but with a z-axis added to the mix.
+
+
+
+
+
